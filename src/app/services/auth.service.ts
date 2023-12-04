@@ -28,4 +28,9 @@ export class AuthService {
 		}
 		return throwError(() => new Error('Failed to login'));
 	}
+
+	logout() {
+		localStorage.removeItem('token');
+		this.router.navigate(['login']);
+	}
 }
