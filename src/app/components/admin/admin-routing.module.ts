@@ -9,9 +9,10 @@ const routes: Routes = [
 	{
 		path: '', component: AdminDashboardComponent,
 		children: [
-			{ path: 'contacs', component: ContactsComponent },
-			{ path: 'contacs/user/:id', component: ContactsDetailComponent },
-			{ path: 'home', component: HomeComponent }
+			{ path: 'contacts', component: ContactsComponent },
+			{ path: 'contacts/user/:id', component: ContactsDetailComponent },
+			{ path: 'home', component: HomeComponent },
+			{ path: '', redirectTo: 'home', pathMatch: 'full' }
 		]
 	}
 ];
